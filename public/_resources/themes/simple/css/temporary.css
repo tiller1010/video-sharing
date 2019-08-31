@@ -1,0 +1,11 @@
+.video-container{
+	position: relative;
+}
+.video-thumbnail{
+	position: absolute;
+	height: 100% !important;
+	max-width: 100%;
+}
+body{
+	background-color: teal !important;
+}
