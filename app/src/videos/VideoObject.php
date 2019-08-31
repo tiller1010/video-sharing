@@ -21,9 +21,18 @@ class VideoObject extends DataObject {
 		'VideoPage' => VideoPage::class
 	];
 
+	private static $belongs_many_many = [
+		'VideoResults' => VideoResults::class
+	];
+
 	private static $summary_fields = [
 		'VideoTitle'
 	];
+
+	public function getVideoLink()
+	{
+		return $this->VideoPage::get()->Link();
+	}
 
 	public function getCMSField()
 	{
