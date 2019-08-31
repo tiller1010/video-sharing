@@ -25,9 +25,7 @@ Change it, enhance it and most importantly enjoy it!
 	<% require themedCSS('reset') %>
 	<% require themedCSS('form') %>
 	<% require themedCSS('layout') %>
-	<% require css($resourceURL('themes/simple/css/temporary.css')) %>
-	<%-- <% require themedCSS('temporary') %> --%>
-	<%-- <% require css('themes/simple/css/temporary.css') %> --%>
+	<% require themedCSS('typography') %>
 
 	<link rel="shortcut icon" href="themes/simple/images/favicon.ico" />
 </head>
