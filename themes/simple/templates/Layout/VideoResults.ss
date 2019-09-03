@@ -6,7 +6,7 @@
 		$VideoDescription
 	</div>
 	<div class="video-container">
-		<a href="$getVideoLink"<img src="$VideoThumbnail.URL" class="video-thumbnail"></a>
+		<a href="/"><img src="$VideoThumbnail.URL" class="video-thumbnail"></a>
 	</div>
 </div>
 <% end_loop %>

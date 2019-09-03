@@ -18,10 +18,7 @@ class VideoObject extends DataObject {
 		'VideoSource' => File::class,
 		'VideoThumbnail' => Image::class,
 		'UploadedBy' => UserObject::class,
-		'VideoPage' => VideoPage::class
-	];
-
-	private static $belongs_many_many = [
+		'VideoPage' => VideoPage::class,
 		'VideoResults' => VideoResults::class
 	];
 
@@ -31,7 +28,7 @@ class VideoObject extends DataObject {
 
 	public function getVideoLink()
 	{
-		return $this->VideoPage::get()->Link();
+		return VideoPage::get()->Link();
 	}
 
 	public function getCMSField()
