@@ -7,7 +7,7 @@ use SilverStripe\Forms\FormAction;
 
 class VideoPageController extends PageController {
 
-	private static $allowed_actions =[
+	private static $allowed_actions = [
 		'CommentForm'
 	];
 

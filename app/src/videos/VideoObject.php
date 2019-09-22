@@ -18,8 +18,7 @@ class VideoObject extends DataObject {
 		'VideoSource' => File::class,
 		'VideoThumbnail' => Image::class,
 		'UploadedBy' => UserObject::class,
-		'VideoPage' => VideoPage::class,
-		'VideoResults' => VideoResults::class
+		'VideoPage' => VideoPage::class
 	];
 
 	private static $summary_fields = [
