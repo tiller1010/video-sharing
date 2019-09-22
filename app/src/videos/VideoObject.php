@@ -4,6 +4,7 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\Assets\File;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\TextAreaField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\FieldsList;
 
@@ -21,23 +22,19 @@ class VideoObject extends DataObject {
 		'VideoPage' => VideoPage::class
 	];
 
+	private static $owns = [
+		'VideoSource',
+		'VideoThumbnail'
+	];
+
 	private static $summary_fields = [
 		'VideoTitle'
 	];
 
-	public function getVideoLink()
+	public function getCMSFields()
 	{
-		return VideoPage::get()->Link();
-	}
+		$fields = parent::getCMSFields();
 
-	public function getCMSField()
-	{
-		$title = TextField::create('VideoTitle', 'Title');
-		$description = TextField::create('VideoDescription', 'Description');
-
-		return new FieldsList(
-			$title,
-			$description
-		);
+		return $fields;
 	}
 }
