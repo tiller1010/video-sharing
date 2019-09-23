@@ -10,7 +10,9 @@
 
 <% loop $Results %>
 	<div class="video-result">
-	    <h2>$VideoTitle</h2>
-	    <img src="$VideoThumbnail.URL" width="320px" height="240px">
+		<a href="$VideoPage.Link">
+		    <h2>$VideoTitle</h2>
+		    <img src="$VideoThumbnail.URL" width="320px" height="240px">
+	    </a>
 	</div>
 <% end_loop %>
