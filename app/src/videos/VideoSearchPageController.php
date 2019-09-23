@@ -70,6 +70,8 @@ class VideoSearchPageController extends PageController {
 			'ActiveFilters' => $activeFilters
 		];
 
+		var_dump($activeFilters);
+
 		return $data;
 	}
 
