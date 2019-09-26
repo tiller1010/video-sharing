@@ -3,6 +3,7 @@
 use SilverStripe\Forms\Form;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\TextAreaField;
 use SilverStripe\Forms\FormAction;
 
 class VideoPageController extends PageController {
@@ -18,7 +19,7 @@ class VideoPageController extends PageController {
 			__FUNCTION__,
 			FieldList::create(
 				TextField::create('Name'),
-				TextField::create('Comment')
+				TextAreaField::create('Comment')
 			),
 			FieldList::create(
 				FormAction::create('HandleForm')

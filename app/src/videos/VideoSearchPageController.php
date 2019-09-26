@@ -55,22 +55,27 @@ class VideoSearchPageController extends PageController {
 				'RemoveLink' => HTTP::setGetVAr('Keywords', null, null, '&')
 			]));
 
-			$properties = $videos->filter([
-				'Title:PartialMatch' => $search
+			$videos = $videos->filter([
+				'VideoTitle:PartialMatch' => $search
 			]);
 		}
 
-		$paginatedProperties = PaginatedList::create(
+		$paginatedVideos = PaginatedList::create(
 			$videos,
 			$request
 		);
 
 		$data = [
-			'Results' => $paginatedProperties,
+			'Results' => $paginatedVideos,
 			'ActiveFilters' => $activeFilters
 		];
 
-		var_dump($activeFilters);
+		//var_dump($activeFilters);
+
+		if($request->isAjax()){
+			return $this->customise($data)
+				->renderWith('VideoSearchPage');
+		}
 
 		return $data;
 	}
