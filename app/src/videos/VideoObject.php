@@ -18,7 +18,6 @@ class VideoObject extends DataObject {
 	private static $has_one = [
 		'VideoSource' => File::class,
 		'VideoThumbnail' => Image::class,
-		'UploadedBy' => UserObject::class,
 		'VideoPage' => VideoPage::class
 	];
 

@@ -23,6 +23,9 @@ class VideoPage extends Page {
 	{
 		$fields = parent::getCMSFields();
 
+		$fields->removeByName('Content');
+		$fields->removeByName('Metadata');
+
 		$fields->addFieldToTab('Root.Main', GridField::create(
 			'VideoObjects',
 			'Videos',

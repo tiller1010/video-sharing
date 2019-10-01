@@ -23,7 +23,7 @@ class VideoSearchPageController extends PageController {
 
 		if($search = $request->getVar('Keywords')){
 			$activeFilters->push(ArrayData::create([
-				'Label' => 	"Keywords: '$search'",
+				'Label' => 	"'$search'",
 				'RemoveLink' => HTTP::setGetVAr('Keywords', null, null, '&')
 			]));
 
@@ -35,7 +35,7 @@ class VideoSearchPageController extends PageController {
 		$paginatedVideos = PaginatedList::create(
 			$videos,
 			$request
-		);
+		)->setPageLength(15)->setPaginationGetVar('s');
 
 		$data = [
 			'Results' => $paginatedVideos,
