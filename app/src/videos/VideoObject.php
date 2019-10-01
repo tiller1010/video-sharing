@@ -6,7 +6,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TextAreaField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Forms\FieldsList;
+use SilverStripe\Forms\FieldList;
 
 class VideoObject extends DataObject {
 
@@ -33,8 +33,11 @@ class VideoObject extends DataObject {
 
 	public function getCMSFields()
 	{
-		$fields = parent::getCMSFields();
-
-		return $fields;
+		return new FieldList(
+			TextField::create('VideoTitle'),
+			TextAreaField::create('VideoDescription'),
+			UploadField::create('VideoSource'),
+			UploadField::create('VideoThumbnail')
+		);
 	}
 }

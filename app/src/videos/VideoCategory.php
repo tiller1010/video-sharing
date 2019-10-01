@@ -10,6 +10,14 @@ class VideoCategory extends DataObject {
 		'Title' => 'Text'
 	];
 
+	private static $has_one = [
+		'VideoSearchPage' => VideoSearchPage::class
+	];
+
+	private static $belongs_many_many = [
+		'VideoPage' => VideoPage::class
+	];
+
 	public function getCMSFields()
 	{
 		return FieldList::create(
