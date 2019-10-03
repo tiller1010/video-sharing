@@ -35,17 +35,19 @@ class VideoSearchPageController extends PageController {
 		$paginatedVideos = PaginatedList::create(
 			$videos,
 			$request
-		)->setPageLength(15)->setPaginationGetVar('s');
+		)->setPageLength(5)->setPaginationGetVar('s');
 
 		$data = [
 			'Results' => $paginatedVideos,
 			'ActiveFilters' => $activeFilters
 		];
 
-		if($request->isAjax()){
-			return $this->customise($data)
-				->renderWith('VideoSearchPage');
-		}
+		// Ajax portion
+		// -------------
+		// if($request->isAjax()){
+		// 	return $this->customise($data)
+		// 		->renderWith('VideoSearchPage');
+		// }
 
 		return $data;
 	}
