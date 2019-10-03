@@ -7,14 +7,18 @@
 	font-size: 1.5em;
 }
 
+.search-page{
+	position: relative;
+}
 .search-form{
 	position: absolute;
 	right: 10px;
-	top: 100px;
+	top: 10px;
 }
 
 .pagination{
-	margin: 0 auto;
+	margin: 10px auto;
+	font-size: 1.5em;
 }
 .pagination ul{
 	list-style: none;
