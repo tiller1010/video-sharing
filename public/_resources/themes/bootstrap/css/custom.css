@@ -1,3 +1,12 @@
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+
+.navbar-light .navbar-toggler{
+	border: none;
+}
+.fa-bars{
+	font-size: 1.5em;
+}
+
 .search-form{
 	position: absolute;
 	right: 10px;
