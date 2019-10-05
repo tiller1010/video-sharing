@@ -1,5 +1,9 @@
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 
+.main{
+	min-height: 300px;
+}
+
 .navbar-light .navbar-toggler{
 	border: none;
 }

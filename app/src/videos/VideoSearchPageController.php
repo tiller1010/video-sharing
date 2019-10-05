@@ -72,6 +72,7 @@ class VideoSearchPageController extends PageController {
 				TextField::create('Keywords')
 					->setAttribute('placeholder', 'Search for a video'),
 				DropdownField::create('Category', 'Category', VideoCategory::get()->map('ID', 'Title'))
+					->setEmptyString('Search in category')
 			),
 			FieldList::create(FormAction::create('doVideoSearch', 'Search'))
 
