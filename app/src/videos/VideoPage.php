@@ -13,10 +13,6 @@ class VideoPage extends Page {
 		'Comments' => VideoComment::class
 	];
 
-	private static $many_many = [
-		'VideoCategories' => VideoCategory::class
-	];
-
 	private static $can_be_root = false;
 
 	public function getCMSFields()
@@ -33,12 +29,12 @@ class VideoPage extends Page {
 			GridFieldConfig_RecordEditor::create()
 		));
 
-		$fields->addFieldToTab('Root.Main', GridField::create(
-			'VideoCategories',
-			'Categories',
-			$this->VideoCategories(),
-			GridFieldConfig_RecordEditor::create()
-		));
+		// $fields->addFieldToTab('Root.Main', GridField::create(
+		// 	'VideoCategories',
+		// 	'Categories',
+		// 	$this->VideoCategories(),
+		// 	GridFieldConfig_RecordEditor::create()
+		// ));
 
 		return $fields;
 	}

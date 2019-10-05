@@ -11,7 +11,7 @@ class VideoCategory extends DataObject {
 	];
 
 	private static $belongs_many_many = [
-		'VideoPage' => VideoPage::class
+		'VideoObjects' => VideoObject::class
 	];
 
 	public function getCMSFields()
