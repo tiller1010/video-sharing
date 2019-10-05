@@ -22,7 +22,7 @@ class VideoPageController extends PageController {
 				TextAreaField::create('Comment')
 			),
 			FieldList::create(
-				FormAction::create('HandleForm')
+				FormAction::create('HandleForm', 'Submit Comment')
 			)
 		);
 
