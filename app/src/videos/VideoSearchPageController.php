@@ -53,11 +53,9 @@ class VideoSearchPageController extends PageController {
 			'ActiveFilters' => $activeFilters
 		];
 
-		// Ajax portion
-		// -------------
 		// if($request->isAjax()){
 		// 	return $this->customise($data)
-		// 		->renderWith('VideoSearchPage');
+		// 		->renderWith('bootstrap/templates/Includes/VideoSearchResults');
 		// }
 
 		return $data;
