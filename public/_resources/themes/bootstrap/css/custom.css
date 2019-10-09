@@ -42,3 +42,7 @@
 .pagination .active a{
 	color: #f00;
 }
+
+video{
+	max-width: 100%;
+}

@@ -3,7 +3,7 @@
 	<div class="container result-container my-5">
 		<a href="$VideoPage.Link">
 		    <h2>$VideoTitle</h2>
-		    $VideoThumbnail.Fill(400,227)
+		    $VideoThumbnail.Fill(400,225)
 	    </a>
 	</div>
 <% end_loop %>
