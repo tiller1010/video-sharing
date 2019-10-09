@@ -24,6 +24,8 @@
 .pagination{
 	margin: 10px auto;
 	font-size: 1.5em;
+	width: fit-content;
+	max-width: 700px;
 }
 .pagination ul{
 	list-style: none;
@@ -31,7 +33,6 @@
 	justify-content: space-around;
 	padding: 0 15px;
 	min-width: 200px;
-	max-width: 700px;
 }
 .pagination .active a{
 	color: #f00;
