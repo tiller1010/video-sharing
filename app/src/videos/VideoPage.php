@@ -29,13 +29,6 @@ class VideoPage extends Page {
 			GridFieldConfig_RecordEditor::create()
 		));
 
-		// $fields->addFieldToTab('Root.Main', GridField::create(
-		// 	'VideoCategories',
-		// 	'Categories',
-		// 	$this->VideoCategories(),
-		// 	GridFieldConfig_RecordEditor::create()
-		// ));
-
 		return $fields;
 	}
 }
